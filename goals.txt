@@ -1,0 +1,19 @@
+Goal : Make something!
+
+Subgoal : Don't Leggo my Eggo
+As long as we continue to track our tasks and progress in waffle, completing our main goal is as simple as completing each next little task.
+
+Subgoal : Operation Duck
+Include a fun easter egg in the project.
+
+Subgoal : Showy-GaT
+Keep our collaboration fun by doing activities together outside of the project.
+
+Subgoal : Get to a prototype
+Get a minimal version of the project up and running.
+
+Subgoal : Create comics 
+Use comics as a way to convey design ideas, specify project requirements, and explore potential alternatives. 
+
+Subgoal : Pass a physics test
+Learn some physics!
