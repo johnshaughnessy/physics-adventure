@@ -1,0 +1,136 @@
+Two months ago I decided that I wanted to learn physics.
+I had never taken a class in school, but it seemed like an interesting and useful topic that I would naturally gravitate towards given my background in mathematics.
+To say I had several options for how to do this is an understatement. I may have had too many.
+
+My little brother Mikey knows physics very well, having majored in physics at UC Santa Barbara.
+So, I called him up and asked if he wanted to collaborate on a project with me.
+The basic idea was this: we build a kind of "virtual learning environment", and, in the process, I learn some basic physics.
+
+Great!
+
+So, a few weeks later Mikey, having completed his book, "The Boy, The Girl, and The Butt", came to stay with me in my cramped apartment in Mountain View, CA.
+At first, we didn't have a good idea about what we were doing. Mikey thought I'd have a much clearer roadmap for the project than I actually did, and I found it
+very difficult to settle on the core ideas that I wanted to explore with our virtual learning environment.
+
+"You sold me on it being like Khan Academy, but in VR", Mikey told me.
+I didn't want to commit to this vision exactly, because I don't see how projecting instructional materials on a virtual wall is significantly different than
+projecting them on my monitor. Sure, we could make a system where other people can watch with you, but that didn't need to be in VR. What would take advantage of
+this 3D space? And, since I'm less gung-ho about VR-first design thinking than I used to be*, I figured I should think about 3D space, not head-tracked displays or
+6 DOF devices like Vive and Oculus controllers.
+
+*At AltspaceVR, we considered the GearVR, Daydream, "monoscopic" desktop users, and (if we had released the mode) "monoscopic" mobile device users vital to our success
+as a company and a product. Similarly, Mozilla Hubs supports a wide variety of non-vr devices, and we expect MOST people to experience what we've built through these
+non-vr means. Rather than considering these modalities as second class, I have come to view them as differently abled (and I don't mean that in a politically correct sense).
+Desktop monoscopic mode permits the ability to type with a standard keyboard, meaning that text input can be done much more effectively on this platform than on mobile or in
+VR. Most people store personal media on their mobile device, meaning that the phone (for practical rather than "raw" technical reasons) may be uniquely positioned to allow
+users to bring that personal media into the shared space. VR device users have the benefits of having their head motions translated into an avatar's body language. People
+with Vive and Oculus controllers can easily control 12 analog values by using 3 positional axes and 3 rotational axes on each hand. Furthermore, advanced users are provided
+additional analog and (disappointingly few) digital inputs as well.
+
+So anyway, in looking for material that would assist in my learning of physics, I had a lot of options. I was attracted to the idea of starting with "The Feynman Lectures on Physics"
+and building my knowledge up from there. I had read a bit of it and enjoyed the style. It was a bit dense, and I didn't have the accompanying problem sets, so I thought Mikey could
+help bridge the gap by finding problems that were well suited to the material in the lectures. I wanted to practice the concepts to solidify and more wholly understand them, rather
+than only learn them on a superficial level.
+
+Alternatively, I could study from a textbook that seemed to have been compiled by very capable physics professors and is widely used in physics curriculum in many universities. The
+textbook, "Modern Physics" covers all the material you might learn in 2 years of undergraduate physics. It has hundreds of exercises of varying degrees of difficulty at the end of
+each chapter. It has video clips the reader can watch by scanning QR codes scattered throughout the book. In short, it's a wonderfully impressive resource.
+
+Mikey suggested that I learn from a mixture of "Modern Physics" and problem sets of his own design. I took his advice, and began working on his problem sets.
+We struggled to merge the two goals of the project together. Learning SOME amount of physics ought not be an overwhelmingly difficult challenge for me,
+given that I'm motivated, have enough skills in math for that not to slow me down, and I have a capable tutor literally living with me.  However, we had a very
+difficult time agreeing on what kind of artifact** we should create along the way.
+
+** Artifact: From the Latin _arte_, meaning "by or using art" and _facere_ or _factum_, meaning "make" or "something made". It is "an object made by human beings", but here we
+widen our definition to include "objects" to include digital "objects" or patterns, and don't limit it to only those things made by humans. When I use the word, I mean something
+that can be experienced in some way, can be "pointed to" by a link or type of reference. Artifacts help us to communicate with and understand each other. Words are artifacts.
+Face to face conversation that isn't recorded is the creation of "temporary" artifacts of speech and body language. The structure of artifacts matter, and they matter a LOT.
+Version control systems like git allow people to manage change to the artifacts they create and run together. Conversations in IRC are functionally different when there is a
+built-in mechanism for archiving messages or not. The basic slack conversation artifact structure is a set of named sequences of utterance artifacts (text, emoji, video, links, etc.),
+sorted chronologically. Slack threads adds a second dimension to each of these named sequences, giving people the option of appending a "threaded utterance" artifact onto
+the "main line" utterance artifact. While these threads allow certain types of communication to happen that would be difficult to do before (e.g. having several simultaneous
+conversations happening in the same original named sequence), they are also riddled with problems (e.g. I only know about activity in threads that I've participated in. I could
+miss out on any number of messages if I don't scroll backward through the main named sequence to see if threads I haven't participated in have changed since I last looked).
+In my opinion, threads are a bandaid on top of a fundamentally ineffective structure of communication. While it may be "easy" to understand threads of utterances arranged
+chronologically, this default arrangement makes it extremely difficult for certain types of communication to happen over a long period of time with a large number of people.
+Thus, people resort to a plethora of other artifact / document structures like Google Docs, wikis, can-ban boards, "stand up" meetings, and all of AGILE. I am extremely
+interested in researching and developing tools and social norms that help people overcome certain communication difficulties for better understanding. This is literally
+my favorite topic of conversation and independent "research" (which I put in quotation marks because I have read remarkably few research papers on this topic given how much I
+talk and think about it). Some research into alternative structures have had partial success, but few have come to fruition outside of small research groups.
+(See Compendium (https://en.wikipedia.org/wiki/Compendium_(software)), Issue-based information system (https://en.wikipedia.org/wiki/Issue-based_information_system), Memex,
+and Xanadu.)
+
+We knew we wanted to build something 3D, as I mentioned before. I wanted practice in trying to complete a "game design" challenge in a fixed amount of time, so it was
+important to me for us to create an interactive experience. Beyond that, however, we had different (and unclear) ideas about what kind of experience it should be.
+
+Some areas we explored were:
+ - "Academy" : A virtual khan academy. There is a lecture hall, a study hall, tutors and student that can engage with each other and share work. Imagine a school in the real world,
+   and bring as much of that as possible into a digital environment.
+ - "Scrap" : A scrapbook/blog/vlog arranged in space. As I learn physics, we record videos, status reports, snippets of textbooks I'm reading, and we arrange these materials in
+   the space. 
+
+Some questions we asked were:
+ - What role does the user play in the experience?
+
+   Perhaps they are a student, and they will enter the space and we will try to teach them something they didn't know before. We'll choose an approachable topic for someone with
+   little-to-no exposure to physics and we'll help them learn about that topic.
+     Pros: Project scope is well contained.
+           Success is easy to measure.
+     Cons: Doesn't necessarily take advantage of a social, 3D medium in any way.
+           Doesn't incentivize me to furtherr learn Physics, as I only have to know enough to present those topics.
+           We are encouraged to make the space more interesting, although this is hardly related to the ideas we're exploring.
+
+   Perhaps they are a make-believe student, and the space is a make-believe school. This way, we can explore what it might look and feel like to attend a "virtual academy". We can
+   discuss and relationships between
+     - Artifacts and Artifacts : How does one artifact relate to another? How is this information retrieved, stored, and accessed?
+     - Person and Artifact : How does a person create and find artifacts? What operations can a person perform on an artifact or a set of artifacts?
+     - Person and Person : How do people communicate? What do they exchange?
+     - All : How do temporal and distance concepts change the answers to the questions above?***
+     Pros: We don't have to worry about teaching real material, and so are free to include whatever we think is interesting.
+           We are able to layer narrative structure onto the experience, as if the user were expected to turn in a homework assignment the next day,
+             or had classmates/tutors/professors that helped each other, or there was an incentive/rewards system in place so that people got the
+             assistance they needed, and were able to help anyone who wanted to learn something they knew.
+           We could easily brainstorm things to do in this category.
+           Plenty of ways to take advantage of a social, 3D medium.
+           Success is easy enough to measure.
+     Cons: Doesn't incentivize me to further learn physics.
+           Project scope balloons easily.
+           We are encouraged to make the space more interesting, although this is hardly related to the ideas we're exploring.
+
+   Perhaps they are no one but ourselves in the future. In that case, perhaps we are just "scrap booking", "blogging", "vlogging", or "vrlogging" in a 3D space. Alternatively,
+   it is a "memory palace" I use to remember concepts, store notes, and arrange content spatially.
+     Pros: Success is easy to measure.
+           I am incentivized to learn more physics.
+           Project scope only balloons as we broaden documentation requirements.
+           I'm not sure if it takes advantage of the medium in any way that 2D doesn't.
+           The space requirements are minimal, as the content we put in it is most important.
+     Cons: Doesn't teach anyone else anything.
+           Is focused on me, and follows MY development.
+           Harder to convince Mikey that this is interesting.
+
+ - What role do we, as content creators, play?
+   We are instructors, and so we fill the space with teaching content.
+     Pros: I learn certain material well enough to teach it.
+     Cons: I only need to learn material at the rate that we codify what I learn into lessons, which takes MUCH longer than learning it in the first place.
+   We are the subject of the content in the space.
+     Pros: We understand the subject material well.
+     Cons: Other people may find it significantly less engaging that content that is actually related to physics.
+   We are collectors, so our job is to arrange content other people have created in an interesting or useful way.
+     Pros: Fewer original content requirements.
+           High quality content enters the experience.
+           Focus more on the experience of the user than on each piece of content.
+     Cons: Content is less customized to our desires. We may end up following a track that has already been laid out rather than find out own way.
+   
+*** We had an easy time talking about some of the ramifications of temporal differences between participants and artifacts. Our conversation and understanding essentially reflected
+a variation on Johansen's (1988) time and place matrix. This, I think, is a shortcoming of our own imagination and descriptive capabilities. It seems that describing the
+alternative information structures I have in my head is still too difficult. This, I think, is because they are still not well formed. Perhaps, in trying to solidify them, I
+will ultimately fail. Will that be because the visions in my head are fundamentally flawed, only possible as illusions? I suspect not. I think probably the "right" idea won't
+come out easily, but I think there is enough of a nugget of an idea in here that something
+
+Good ideas:
+- Memex. As We May Think, 
+- Create tools that elevate human capabilities. Then with elevated abilities, create better tools. Doug Engelbart
+- Make work visible, public, and collaborative. Dynamic Land, Bret Victor
+- Create knowledge you can see, Visual Display of quantitative information
+- Answer "why?" before focusing on "how?". Prototyping before Braid, Jonathon Blow
+- 

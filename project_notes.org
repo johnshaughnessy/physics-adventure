@@ -1,0 +1,534 @@
+#+TITLE: Project Notes
+#+AUTHOR: John Shaughnessy
+* How it started 
+Two months ago I decided that I wanted to learn physics.
+I had never taken a class in school, but it seemed like an interesting and useful topic that I would naturally gravitate towards given my background in mathematics.
+To say I had several options for how to do this is an understatement. I may have had too many.
+
+My little brother Mikey knows physics very well, having majored in physics at UC Santa Barbara.
+So, I called him up and asked if he wanted to collaborate on a project with me.
+The basic idea was this: we build a kind of "virtual learning environment", and, in the process, I learn some basic physics.
+
+Great!
+
+So, a few weeks later Mikey, having completed his book, "The Boy, The Girl, and The Butt", came to stay with me in my cramped apartment in Mountain View, CA.
+At first, we didn't have a good idea about what we were doing. Mikey thought I'd have a much clearer roadmap for the project than I actually did, and I found it
+very difficult to settle on the core ideas that I wanted to explore with our virtual learning environment.
+
+"You sold me on it being like Khan Academy, but in VR", Mikey told me.
+I didn't want to commit to this vision exactly, because I don't see how projecting instructional materials on a virtual wall is significantly different than
+projecting them on my monitor. Sure, we could make a system where other people can watch with you, but that didn't need to be in VR. What would take advantage of
+this 3D space? And, since I'm less gung-ho about VR-first design thinking than I used to be*, I figured I should think about 3D space, not head-tracked displays or
+6 DOF devices like Vive and Oculus controllers.
+
+*At AltspaceVR, we considered the GearVR, Daydream, "monoscopic" desktop users, and (if we had released the mode) "monoscopic" mobile device users vital to our success
+as a company and a product. Similarly, Mozilla Hubs supports a wide variety of non-vr devices, and we expect MOST people to experience what we've built through these
+non-vr means. Rather than considering these modalities as second class, I have come to view them as differently abled (and I don't mean that in a politically correct sense).
+Desktop monoscopic mode permits the ability to type with a standard keyboard, meaning that text input can be done much more effectively on this platform than on mobile or in
+VR. Most people store personal media on their mobile device, meaning that the phone (for practical rather than "raw" technical reasons) may be uniquely positioned to allow
+users to bring that personal media into the shared space. VR device users have the benefits of having their head motions translated into an avatar's body language. People
+with Vive and Oculus controllers can easily control 12 analog values by using 3 positional axes and 3 rotational axes on each hand. Furthermore, advanced users are provided
+additional analog and (disappointingly few) digital inputs as well.
+
+So anyway, in looking for material that would assist in my learning of physics, I had a lot of options. I was attracted to the idea of starting with "The Feynman Lectures on Physics"
+and building my knowledge up from there. I had read a bit of it and enjoyed the style. It was a bit dense, and I didn't have the accompanying problem sets, so I thought Mikey could
+help bridge the gap by finding problems that were well suited to the material in the lectures. I wanted to practice the concepts to solidify and more wholly understand them, rather
+than only learn them on a superficial level.
+
+Alternatively, I could study from a textbook that seemed to have been compiled by very capable physics professors and is widely used in physics curriculum in many universities. The
+textbook, "Modern Physics" covers all the material you might learn in 2 years of undergraduate physics. It has hundreds of exercises of varying degrees of difficulty at the end of
+each chapter. It has video clips the reader can watch by scanning QR codes scattered throughout the book. In short, it's a wonderfully impressive resource.
+
+Mikey suggested that I learn from a mixture of "Modern Physics" and problem sets of his own design. I took his advice, and began working on his problem sets.
+We struggled to merge the two goals of the project together. Learning SOME amount of physics ought not be an overwhelmingly difficult challenge for me,
+given that I'm motivated, have enough skills in math for that not to slow me down, and I have a capable tutor literally living with me.  However, we had a very
+difficult time agreeing on what kind of artifact (see the #Artifact section) we should create along the way.
+
+We knew we wanted to build something 3D, as I mentioned before. I wanted practice in trying to complete a "game design" challenge in a fixed amount of time, so it was
+important to me for us to create an interactive experience. Beyond that, however, we had different (and unclear) ideas about what kind of experience it should be.
+
+* Timeline
+We set out to work on the project for 3 months, which is ~12 weeks. A couple extra weeks were added for things that came up.
+*** Week by week
+**** Week 1
+**** Week 2
+**** Week 3
+**** Week 4
+**** Week Off
+**** Week 5
+**** Week 6
+**** Week 7
+**** Week 8
+**** Week Off
+**** Week 9
+Possible goals for the last four weeks:
+Week 9 : 
+- Record a scripted interaction for Mikey's screenshare video.
+- Put two bots, the video, and the voice into the space.
+Week 10 :
+- Write and record an audio reflection on the plethora of internet content, and the desire to arrange and understand the semantic relationships in the content. 
+- Place at least 50 images in a small space, with the intention to overwhelm the viewer with content. If there is not performance drop off, increase the number 
+of images to 75+. These are not hard to find. GIFs kill performance, so don't use them. Videos are expensive, so exclude those for this as well. (Just use images.)
+Week 11 :
+- Place furniture and other 3D models sourced from blocks and sketchfab in the space.
+- Finalize documentation of the experience.
+Week 12 : 
+- Place text, images, and audio in the space to help guides the user through the experience.
+
+Stretch goal: 
+- Host the content online, using the dev server since the hubs server's Content Security Policy wont allow me to host the modified client 
+the way I had hoped.
+
+**** Week 10
+**** Week 11
+**** Week 12
+* Some areas we explored were:
+*** "Academy" : A virtual khan academy. 
+There is a lecture hall, a study hall, tutors and student that can engage with each other and share work. 
+Imagine a school in the real world, and bring as much of that as possible into a digital environment.
+*** "Scrap" : A scrapbook/blog/vlog arranged in space. 
+As I learn physics, we record videos, status reports, snippets of textbooks I'm reading, and we arrange these materials in the space. 
+* Some questions we asked were:
+*** What role does the user play in the experience?
+**** Perhaps they are a student, and they will enter the space and we will try to teach them something they didn't know before. 
+We'll choose an approachable topic for someone with little-to-no exposure to physics and we'll help them learn about that topic.
+*****     Pros: Project scope is well contained.
+           Success is easy to measure.
+*****     Cons: Doesn't necessarily take advantage of a social, 3D medium in any way.
+           Doesn't incentivize me to furtherr learn Physics, as I only have to know enough to present those topics.
+           We are encouraged to make the space more interesting, although this is hardly related to the ideas we're exploring.
+
+**** Perhaps they are a make-believe student, and the space is a make-believe school. This way, we can explore what it might look and feel like to attend a "virtual academy". We can
+   discuss and relationships between
+****** Artifacts and Artifacts : How does one artifact relate to another? How is this information retrieved, stored, and accessed?
+****** Person and Artifact : How does a person create and find artifacts? What operations can a person perform on an artifact or a set of artifacts?
+****** Person and Person : How do people communicate? What do they exchange?
+****** All : How do temporal and distance concepts change the answers to the questions above? (See #TimeAndSpace)
+***** Pros: We don't have to worry about teaching real material, and so are free to include whatever we think is interesting.
+           We are able to layer narrative structure onto the experience, as if the user were expected to turn in a homework assignment the next day,
+             or had classmates/tutors/professors that helped each other, or there was an incentive/rewards system in place so that people got the
+             assistance they needed, and were able to help anyone who wanted to learn something they knew.
+           We could easily brainstorm things to do in this category.
+           Plenty of ways to take advantage of a social, 3D medium.
+           Success is easy enough to measure.
+***** Cons: Doesn't incentivize me to further learn physics.
+           Project scope balloons easily.
+           We are encouraged to make the space more interesting, although this is hardly related to the ideas we're exploring.
+
+**** Perhaps they are no one but ourselves in the future. In that case, perhaps we are just "scrap booking", "blogging", "vlogging", or "vrlogging" in a 3D space. Alternatively,
+   it is a "memory palace" I use to remember concepts, store notes, and arrange content spatially.
+***** Pros: Success is easy to measure.
+           I am incentivized to learn more physics.
+           Project scope only balloons as we broaden documentation requirements.
+           I'm not sure if it takes advantage of the medium in any way that 2D doesn't.
+           The space requirements are minimal, as the content we put in it is most important.
+***** Cons: Doesn't teach anyone else anything.
+           Is focused on me, and follows MY development.
+           Harder to convince Mikey that this is interesting.
+
+*** What role do we, as content creators, play?
+**** We are instructors, and so we fill the space with teaching content.
+*****     Pros: I learn certain material well enough to teach it.
+*****     Cons: I only need to learn material at the rate that we codify what I learn into lessons, which takes MUCH longer than learning it in the first place.
+****   We are the subject of the content in the space.
+******     Pros: We understand the subject material well.
+******     Cons: Other people may find it significantly less engaging that content that is actually related to physics.
+****   We are collectors. 
+Our job is to arrange content other people have created in an interesting or useful way.
+******     Pros: Fewer original content requirements.
+           High quality content enters the experience.
+           Focus more on the experience of the user than on each piece of content.
+******     Cons: Content is less customized to our desires. We may end up following a track that has already been laid out rather than find out own way.
+   
+* Challenges
+*** Limiting project scope 
+Among the most difficult parts of this project for me has been settling on its scope.
+At work, my scope is in part chosen by the anxiety I feel due to social pressures related to my ability to contribute meaningful changes to the code of my project.
+The more anxious I feel that I should contribute something to the project, the more immediate the target of my thinking becomes. When I am feeling comfortable with my 
+level of output, I also feel more comfortable to widen the range of topics I will think about.
+On this project, however, the goals that Mikey and I express are the sources of this type of anxiety. There are competing motivations. I want to express thoughts that 
+I have, and simultaneously explore them. Being able to meaningfully communicate or explore my ideas in a certain amount of time means to restrict the scope of those 
+thoughts. Previously when working on "creative projects", the amount of scope limitation I've had to do is shallow. There was enough in common among the ideas close at 
+hand to be able to simply "go in a direction" and be on the way to most or all of my ideas. In this project, I've had enough time to get to an INTERACTIVE FOUNDATION of
+a SPECIFIC FRAMEWORK. Once such a framework is reached, specific ideas must be chosen (and others EXCLUDED) from the expression. This is an obvious limitation, but it is 
+not obvious to me how "best" to do it (or what kind of trade-offs I can make in the process). Experience of this type is one of the most significant take-aways for the 
+whole project, since I think it is a critical factor in whether or not the artifacts I create satisfy my desire to express and explore ideas.
+
+*** Is choosing project constraints equivalent to evaluating values? 
+The project seems to be a decision to prioritize one set of thoughts and activities over others.
+Sure, _all of my activities_ are of this nature, but in conceptualizing this project there is a _major_ difference.
+This difference is that I consider this project to be occupying my "free" time. What I mean by that is that I've internally
+excused certain activities from most internal criticism:
+- While exercising or eating, I "justify" my action with the thought that it's acceptable for me to spend time and energy on maintaining my health.
+- While working, I "justify" my action with the thought that "Mozilla", as the beneficiary of my work, is doing "good" for lots of people, 
+and I care about doing good for those people. Since "Mozilla" provides me with a SIGNIFICANT amount of resources, I should make sure that 
+I do my best to provide AT LEAST AS MUCH to "Mozilla" and the rest of humanity. Unfortunately, this is incredibly difficult to measure or 
+actually conceptualize. I also justify this action with the thought that as a SKILLED/SPECIALIZED LABORER, I can contribute MORE VALUE to 
+many causes in the future by BUILDING SKILLS and concentrating on my work now. While this has failed to materialize, I still think this is 
+due to my relative inexperience and that I will be better equipped to help people as I build skills.
+- While socializing, I "justify" my action by considering how social interaction helps maintain my health, but more importantly, I think about 
+how certain wisdom is more likely to be gained by spending time with people who are not like me. This means that I feel _badly_ about certain 
+types of social engagements, because in associating only with those in a similarly priveleged environment as my own, I worry that I continue the
+and strengthen the system of oppression simply by participating in existing social network in that realm. This is especially challenging because
+these associations are beneficial to me in ways I think will translate to benefitting other people too, (e.g. building skills by hanging around 
+more skilled people).
+
+The notion of "free" time to me, means that it's unallocated time/energy to spend on activities I've not already internally "justified".
+A philosophical problem with this outlook is that these justifications are not rigorous and I don't know how to make them rigorous. 
+
+Not to get TOO circular or lost in my reasoning, but how do I grapple with the idea of consciousness as explored by Daniel Dennett, or 
+identity as explored by my own experience and the recounting of the experiences of others? Identity to me is a terribly difficult idea 
+to "deconstruct".
+
+*** Forming habits, being effective, improving leadership skills
+In the "mana metaphor", you have a tank of mana that you can spend on activities / thoughts while you're awake.
+If you spend mana the same way each day, those activities you spend mana on become less expensive.
+Thus, changing what you spend mana on is expensive. Changing a habit is difficult because you are reallocating mana.
+
+Mana spent on certain activities and thoughts might have compounding effects. (Learning about something early on 
+may unlock insights for "free" later, so that it's better to spend the mana early on rather than later, even if the 
+immediate benefits of spending the mana is the same).
+
+Decreased mana costs in certain areas means that specialization and habit forming has real benefits.
+
+Managing mana and time as limited resources means that allocation strategies have a significant effect on outcomes.
+
+During this project, I've tried to form the habit of spending "free" time on "meaningful" (here defined as "helpful to 
+the project") activities and thoughts. Such habit forming has cost significant mana, and I seemed to have limited 
+success. These habits have not been created or adjusted for free. I seem to have changed other habits as well, namely 
+that I exercise far less than I had before the beginning of the project, and I see friends far less. I did not (and 
+do not know how to) measure the interconnectedness of these observations.
+
+Measuring my effectiveness on the project via our waffle.io board has been simultaneously helpful and discouraging.
+It is helpful because it establishes the metric by which we measure distance to our goals and milestones. It is 
+discouraging because of how effortful it has been to stick to those tasks in waffle, and thus to stick to the 
+spirit and intentions of the original project. The more specific the requirements of the project, the more specific 
+the metric of effectiveness, and the more difficult (it seems) to maintain interest in those specific requirements as 
+time goes by. However, a certain level of specificity is required or else you aren't really going "toward" any goal.
+("Do something creative" is not a very specific task. It is easy to accomplish, but it's difficult to say whether 
+it leads anywhere you want to go.)
+
+Related to this is the idea that "I" am not in total control of what I think about, and success depends on pursuing 
+goals that are enough in line with the ideas that take control of ME, given certain mana and time constraints. Dave 
+Chappelle expresses this idea in "Comedians in Cars Getting Coffee". You want the _idea_ to be the creative driver of 
+the car, and you want to be in the car. You aren't the driver. Sometimes you're not even in the passenger seat. You 
+may not be dressed to go out but the car pulls up and tells you to get in. Alternatively, you can try to drive the 
+car, but if you do that, you'll be driving but you won't know where to go. The idea won't be in the car with you.
+Once in a while an idea will drive you around and tell you to take the wheel. You do, and it feels great, but it's 
+temporary, and you had better not lose the idea or drive off a cliff.
+
+Working together with another person on this project while maintaining some kind of "ownership"/veto power/director role
+has given me experience with a kind of small-scale leadership. As with other leadership experiences in my life, the 
+best thing I know how to do (and the area I know how to criticize myself for and improve on) is to set an example of how 
+I want the activities we do to be conducted. 
+
+While it is OK to not know things, it seems VERY IMPORTANT to communicate what is known, what is NOT known, and what 
+we KNOW we don't know, but want to know. In other words, "What question are we trying to answer in this brainstorming session?"
+or "What is the _goal_ of these activities I'm spending time on?" should have answers, especially when I'm directing 
+_other peoples' time and mana_ (in exchange for money or anything else). My leadership skill is proportional to my ability
+to _not waste peoples' time_ or to direct their time to activities worth doing.
+
+*** Thinking too wide, too large, too much, and too hard
+I seem to only be effective on a few tasks. Having too many books on my reading list gives me severe anxiety and learner's block.
+I need to narrow my focus to only a few things. Casting too wide a net is detrimental.
+
+I seem to only accomplish things that are relatively near at hand. I need a series of small wins to feel motivated enough to continue.
+Small wins build on themselves to make large achievements possible, but setting out to accomplish large things is often a recipe for failure.
+
+Thinking about something wholly means to shut out everything else. Doing this for a long time involves serious risk. During week 8 of the 
+project, I thought about almost nothing besides work and the project. I dreamt about them. They filled my conscious and unconscious head. 
+I failed to advance the project in any measurable way (and therefore, it felt, in any meaningful way). My anxiety shot up.
+
+Trying to understand things is taxing. If you spend all your time trying to understand what you're trying to do, you won't do it. This document
+is partially a product of this bad strategy.
+
+*** Drug use and escapism
+When I use cannabis to get high, I tend to think less about what I don't know, and to become enthralled with things I think about or do know.
+I can't talk or think clearly. I tend to bring more awareness into my body. I let some of my goals (and their accompanying anxieties) go for a 
+few hours.
+
+There are a lot of reasons why I resort to smoking weed. Escaping thought patterns that cause me pain, or to pursue/manufacture patterns that 
+cause me pleasure, might explain them.
+
+I have a kind of idea that I should "be the best I can be", which is very difficult when I don't know what it means to be the best I can be or
+how to do that, even if I decide what best means. It feels a lot like I try to put everything I know about the world together for a more unified 
+understanding / perspective and I do this often. People have told me they notice that I am introspective. Those comments stick out to me because 
+I think I am introspective. Activities like writing in my diary or these notes, or trying to apply the lessons people around the world are 
+trying to get across to the groups I belong to are introspective. At a meta level, I have no idea whether my introspective techniques are "time/mana
+well spent". I would smoke, drink, play video games, etc every day. I wanted to ease pain of introspection, and of living with so much uncertainty 
+(both at the object level, where I was bad at my job, and the meta level, where I didn't know how to act to get better at living). I tried to cure 
+the "boredom" of living "rightly", which meant to focus at the object level on one thing at a time so that I at least felt like I was going 
+somewhere.
+
+It's not much of a mystery why in the last couple months, I've had a much more difficult time avoiding cannabis and other patterns of escapism.
+
+I've started to "lose myself" in my work again, "working" for 10-12 hours a day or more (with widely varying degrees of focus, but with an honest attempt 
+to focus and continue growing my knowledge almost the whole time). This is dangerous by itself, although I feel a little bit like the character in 
+"Whiplash" in that I have a VERY STRONG DESIRE to get better at what I'm doing at work and I feel VERY UNSATISFIED at my current level of skill while 
+maintaining an INTENSE MOTIVATION to do the work necessary to improve.
+
+*** The final four weeks
+The challenge for me for the last four weeks is to leave the meta level and remain at the object level in deciding how to act and 
+what to do with myself.
+In order to succeed I think I need to expand _less_ at work by focusing on _immediate tasks_ and _our_ codebase, rather than on 
+e.g. Realtime Rendering 4th ed., Game Engine Architecture 3rd ed., Programming Rust, WASM, Jai, ECS, Input, Data oriented design,
+3D maths, NURBS, VR/AR technology at large, communication, information, etc. These kinds of things consume a HUGE PORTION of my 
+mental energy, but in order to deliver real progress on hubs while still having enough mana in the tank to advance this project,
+I NEED TO SACRIFICE SOMETHING. 
+I am consistently failing to make advances on this project, and it feels as though I spend as much mana as I possibly can at work 
+and have almost nothing to work with on the project. It may be that my discipline/determination muscles are improving or I'm lowering 
+the mana cost of the creative activities of the project, but I'm still not getting the results I want. I need to adjust until the 
+results appear.
+
+* Too much information?
+*** (cont)
+When I decided I wanted to learn physics, there were hundreds of options for me to choose as a "primary source" from which I could learn.
+I first chose "Feynman's Lectures on Physics" because I had read a bit about it and I was attracted to the idea of learning from such a well-reknowned thinker.
+Then, since "University Physics" seemed to be such a widely used textbook in modern universities (and Mikey recommended it over Feynman's Lectures as a way to 
+obtain practical knowledge and problem solving skills), I switched to use that as my primary source.
+It wasn't until Week 7 that I considered looking through many more options I could have used as primary sources. I could have followed the lectures in an 
+intro-to-physics online course. There were MANY to choose from. In one sitting, I found ~10, most of which had problem sets, video lectures, exams, and class notes.
+I consulted message boards like Reddit and Quora to see what other people recommend. I consulted wikipedia, which had ~10 textbooks referenced from the Classical
+Mechanics page.
+
+When we talk about how to improve the ability for people to learn, surely we can admit that free, high quality learning material now exists for a huge amount of 
+the curriculum at universities. How then, do we proceed?
+
+Sites like Coursera attempt to increase the number of participants who complete their courses. 
+They restrict access to learning material except during certain times of the year. 
+Just as a typical university may offer classes beginning in the Fall and the Spring, so too do online "universities" declare a start and end date to their courses. 
+This might help in a few ways (although I do not have the data to know whether it actually does help)
+**** Students who ask questions are more likely to find peers who are studying the material at a similar pace, allowing people to better help each other learn. 
+**** Students have an incentive to finish the course before the materials are restricted.
+*** (cont)
+Online universities also offer degrees and certificates of completion. Again, I don't have the data to assess whetherr these really help.
+
+For some of my most difficult courses during my undergraduate program, my classmates suggested I use certain online video lectures to supplement my course readings.
+These seemed to be helpful to me, as hearing an explanation of a concept from two different knowledgable speakers seems to help reinforce my understanding.
+
+Every audience has a different set of needs. Communication is most effective it is perfectly addresses the needs of its audience.
+The differences between audiences are not superficial. 
+This is not, "Update the objects referred to by a textbook's math exercises to appeal to what the kids these days care about." 
+This is, "Alice already studied Calculus, Bob has not", or "This lesson is in English, but I don't speak English."
+
+This, I think, is not unique to the domain of education. This is an inherent property of communication.
+
+Certain structures give better affordances for bridging the gap between utterance and interpreter. The wikipedia page on "Classical Mechanics" contains enough links
+to other pages and external references for me to fill the gaps of my knowledge as I encounter them:
+
+#todo can org documents display markdown?
+```
+If a constant force F is applied to a particle that makes a displacement Δr,[note 2] the work done by the force is defined as the scalar product of the force and displacement vectors:
+
+    W = F ⋅ Δ r . {\displaystyle W=\mathbf {F} \cdot \Delta \mathbf {r} \,.} W=\mathbf {F} \cdot \Delta \mathbf {r} \,.
+
+More generally, if the force varies as a function of position as the particle moves from r1 to r2 along a path C, the work done on the particle is given by the line integral
+
+    W = ∫ C F ( r ) ⋅ d r . {\displaystyle W=\int _{C}\mathbf {F} (\mathbf {r} )\cdot \mathrm {d} \mathbf {r} \,.} W=\int _{C}\mathbf {F} (\mathbf {r} )\cdot \mathrm {d} \mathbf {r} \,.
+```
+
+Here, the words `force`, `particle`, `displacement`, `work`, `scalar product`, `vectors`, `position`, `path`, and `line integral` are all either defined on this page or linked to 
+their own wikipedia pages. That's pretty good. That's practically the Memex. That's Tim Burners Lee's hypertext. (Note that it's not Ted Nelson's hypertext). Google scholar is 
+a pretty good example of this too, although you typically need to consult additional resources to find the text of the publications, and the references between them are not 
+typically "deep linked" (and instead point you to the whole article/book/content rather than a specific passage).
+
+However, there is no easy way for a wikipedia page to offer two explanations of a phenomenon, aimed at two different audiences. (The exception to this is that there exist 
+separate wikis for different languages. I don't know how the pages for the "same" concept in different languages relate to one another.)
+
+The wiki format is pretty good at allowing readers to fill the gaps of their own knowledge. However, it is unclear how to apply a wiki structure to realtime conversation, or even 
+the asynchronous, non-realtime communication we've grown accustomed to with tools like reddit and slack. (Note that threading is better on reddit than on slack, but several of the 
+same problems exist).
+
+#todo I'm getting tired and I suspect this section will need some cleanup.
+
+* An alternative information structure
+Beware: half baked ideas ahead.
+
+*** Imagination Time:
+
+I go to a webpage. Once the page loads, my user agent downloads images for hundreds of related sites.
+My user agent doesn't connect to all of those sites directly, however, there is some computer performing real requests on my behalf,
+and then sends me screenshots. This computer (which is a part of my user agent, but which is physically separate due 
+to computational concerns), also sends me metadata about _how_ the related sites are related.
+With these images and data, my user agent constructs a scene around me based on various SQL-like queries I am "passively" performing.
+The results of these queries allow me to understand relationships between pieces of web content and answer questions like the 
+ones below (See "I access a video"). If I navigate to a new page, my local user agent and my remote user agent work together to 
+update the scene and the information I'm accessing, computing, and displaying.
+  
+*** Imagination Time:
+
+I access a video (https://www.foo.com/foo.webm).
+I like the video, I want to know
+  - Who made the video? 
+  - Did they release more videos like this one?
+  - Are there other videos by different creators?
+  - What inspired this work? Is this a derivative or adaptation?
+  - Who else has watched this video? Recently?
+  - How are people finding this video? What do they access afterwards?
+  - What do my friends think of this video?
+  - Has anyone at work mentioned this video before?
+I think
+  - This reminded me of another video I've seen.
+  - This reminded me of a passage in a book I read.
+  - This made me laugh, but it also made me sad.
+  - This is related to that "conversation" I was participating in last week.
+  - I didn't finish, so I should save this for later.
+  - A comment someone made about this clip reminded me of a comment someone else made of a passage of a book.
+  
+I want to understand everything on the Classical Mechanics wikipedia page.
+I think
+  - I know some of these things, but not others.
+  - I wonder who else is accessing this content now or has accessed it recently.
+  - What do those people know? Where do we overlap? Where do we differ?
+  - Which parts of this are the easiest for me to understand?
+  
+I missed the beginning of a meeting with my distributed team due to connectivity issues.
+I think
+  - What happened since the start of the meeting?
+Perhaps I can inform my colleagues that I'm present, but will watch from the beginning.
+Perhaps I can speed up time to watch it unfold, then eventually catch up.
+  - How is the text backchannel associated with the meeting as it elapsed?
+I witness a conversation between my peers where I could provide valuable input. I think
+  - How do I know whether this input will still be valuable if I offer it now?
+  - Can I provide the input directly in this moment of "time", or, within the context of the 
+conversation artifact as it was when I witnessed it? (This is important, because the meeting 
+unfolds in a 3D context, where artifacts inhabit the space. Once I catch up to where my peers
+are along some time-like dimension, these artifacts have changed or been removed. The "time-like"
+dimension is not very timelike, so I will instead refer to it as the "graph". It may, in fact,
+not be a graph, and instead by represented as some relational database tables.)
+
+My teammate misses the beginning of a distributed team meeting. I see that he is present, but 
+is reviewing what has already transpired.
+  - I want to say hello to him, even though he is accessing the conversation at a different 
+place in the graph. "Where" does that message live? What _is_ it? It has a sender, a receiver,
+and a time sent, but the sender also has a context, the receiver has a context, and maybe the 
+universe has a context (which may be a temporal/transaction ID as explained by Rich Hickey in
+"Deconstructing the Database").
+  - Something I said at some point during the meeting was incorrect. I don't want my coworker 
+to spend 5 minutes watching the rest of the team correct my confusion, so I want to mark a 
+previous utterance as "corrected" and briefly explain what happened.
+   - My teammate added something to the conversation that already transpired between me and 
+another teammate. I want to jump back into that context, replay the previous 15 seconds, and 
+listen to what my teammate added. From there, I may respond. If further communication is required,
+he may join me there as I listen to the recorded messages, so that we can resume in realtime, 
+from that context.
+   - We resume from that context, and my teammate has not yet caught up to "where" or "when" 
+I "was" in the "meeting" when he first connected. 
+   - After talking a while, I realize it would be helpful us to pause and wait until he absorbs 
+the rest (or specific subsections of) the conversation he has still not yet caught up with.
+So, I "mark" the parts of the "conversation" I want him to traverse through before we continue.
+Once he does that, we will talk in a _new_ context, one where the fact that both he and I have 
+traversed certain parts of the graph is reflected. The tool helps us configure which 
+visual/spatial/computational artifacts we want to include in the context where we will meet again.
+
+Once I begin talking about a dream like this, it is easy for me to relate this back to my desire 
+for different learning materials and tools to exist. It's not enough that are valuable utterances
+in the meeting (or helpful explanations in a textbook), I need to be able to traverse through 
+those utterances with other people, know what they know and don't know, and create a context where
+our conversation is most effective.
+
+So, suppose a week goes by and things have changed. Do we start conversing entirely from scratch?
+I think not. In text, we don't. It's continuous in slack, but not necessarily continuous on github 
+issues. Significant time goes by between bursts of messages, and a lot has changed in the meantime.
+Github issues are labeled. Github issue comments are not, but at least they're linkable.
+
+*** Metric spaces on information
+How similar is one idea to another? 
+What does it mean for the "same" idea to be represented in two different ways?
+What kinds of distance functions (metrics) can we define on ideas?
+There are two problems to solve: 
+- What is the set?
+- What is the metric?
+Once we define metric spaces, we can ask:
+- What useful/meaningful queries can we perform?
+- How do we present query results? 
+- How do different metrics and sets grant different comprehension capabilities?
+
+* #TimeAndSpace
+We had an easy time talking about some of the ramifications of temporal differences between participants and artifacts. Our conversation and understanding essentially reflected
+a variation on Johansen's (1988) time and place matrix. This, I think, is a shortcoming of our own imagination and descriptive capabilities. It seems that describing the
+alternative information structures I have in my head is still too difficult. This, I think, is because they are still not well formed. Perhaps, in trying to solidify them, I
+will ultimately fail. Will that be because the visions in my head are fundamentally flawed, only possible as illusions? I suspect not. I think probably the "right" idea won't
+come out easily, but I think there is enough of a nugget of an idea in here that something
+
+--
+
+Another set of ideas to consider here are those presented in "Understanding Comics" by Scott McCloud. He talks about how visual language is composed of the same "stuff" that 
+written language is, and that we have used these "languages" express a subset of all expressible ideas. 
+
+How we display information is of critical importance, because the effort involved in expressing and understanding information plays a significant role in how "much" information 
+we end up gathering. See "The Visual Display of Quantitative Information" by Edward Tufte.
+
+Another interesting idea related to this is one expressed in _Maps of Meaning_, by Jordan Peterson. Here he separates those things that are measured by the scientific process
+(those things that can be intersubjectively agreed-upon), from those things that _really do exist_ but that cannot yet (or perhaps ever) be measured by the scientific process
+because of their subjective nature. Those things in camp 2, Peterson argues, are what make up the substance of myth (and religion and fiction and tradition etc).
+
+* #Artifact 
+From the Latin _arte_, meaning "by or using art" and _facere_ or _factum_, meaning "make" or "something made". It is "an object made by human beings", but here we
+widen our definition to include "objects" to include digital "objects" or patterns, and don't limit it to only those things made by humans. When I use the word, I mean something
+that can be experienced in some way, can be "pointed to" by a link or type of reference. Artifacts help us to communicate with and understand each other. Words are artifacts.
+Face to face conversation that isn't recorded is the creation of "temporary" artifacts of speech and body language. The structure of artifacts matter, and they matter a LOT.
+Version control systems like git allow people to manage change to the artifacts they create and run together. Conversations in IRC are functionally different when there is a
+built-in mechanism for archiving messages or not. The basic slack conversation artifact structure is a set of named sequences of utterance artifacts (text, emoji, video, links, etc.),
+sorted chronologically. Slack threads adds a second dimension to each of these named sequences, giving people the option of appending a "threaded utterance" artifact onto
+the "main line" utterance artifact. While these threads allow certain types of communication to happen that would be difficult to do before (e.g. having several simultaneous
+conversations happening in the same original named sequence), they are also riddled with problems (e.g. I only know about activity in threads that I've participated in. I could
+miss out on any number of messages if I don't scroll backward through the main named sequence to see if threads I haven't participated in have changed since I last looked).
+In my opinion, threads are a bandaid on top of a fundamentally ineffective structure of communication. While it may be "easy" to understand threads of utterances arranged
+chronologically, this default arrangement makes it extremely difficult for certain types of communication to happen over a long period of time with a large number of people.
+Thus, people resort to a plethora of other artifact / document structures like Google Docs, wikis, can-ban boards, "stand up" meetings, and all of AGILE. I am extremely
+interested in researching and developing tools and social norms that help people overcome certain communication difficulties for better understanding. This is literally
+my favorite topic of conversation and independent "research" (which I put in quotation marks because I have read remarkably few research papers on this topic given how much I
+talk and think about it). Some research into alternative structures have had partial success, but few have come to fruition outside of small research groups.
+(See Compendium (https://en.wikipedia.org/wiki/Compendium_(software)), Issue-based information system (https://en.wikipedia.org/wiki/Issue-based_information_system), Memex,
+and Xanadu.)
+
+* #Ideas
+*** Memex. As We May Think, Vannevar Bush 1945
+*** Xanadu, Ted Nelson
+*** Micropayments for Web Content, Ted Nelson and Jaron Lanier
+*** Relational Algebra, Edgar F Codd
+"A relational model of data for large shared data banks" https://dl.acm.org/citation.cfm?id=362685
+
+Relational databases helped solve problems for application developers that needed store vast quantities of structured data,
+while allowing them more flexibility in rearranging that data, migrating to different storage hardware, and viewing that data 
+differently at different "view layers" of an application. (Sorry, I'm accidentally borrowing terms from Model-View-Controller architecture)
+
+It seems to me that I face similar problems in trying to communicate across time with groups. We adopt social conversation strategies 
+to better take advantage of existing tools like Slack. We practice "good thread hygene", keep chatter in public channels to a minimum,
+and try to avoid alerting people to updates of a conversation unnecessarily. Still, our best efforts seem (to me) to be failing in several 
+major ways.
+
+**** How can we onboard a new person onto our team? How do we document the process by which we reached the point we're at, the decisions we've 
+made, and the design discussions we've had so far? How can a new person distinguish between ideas we've considered and decided against vs 
+ideas we haven't yet considered? 
+
+**** How can we check to see whether the arguments we've made to justify techinical or design decisions are still true or relevant? Generally 
+speaking, we test and hypothesize about very few of the decisions we make. 
+
+**** How can someone on another team come to understand our goals, motivations, current state, and path?
+**** How can we append information, summarize, or remix conversations?
+In other words, how do we create shared artifacts without rewriting everything that has been discussed so far? How do we keep the history and origin 
+of ideas in tact, while still correcting and rewriting them.
+**** TODO: List and explore more ways our communication is failing.
+
+To me it seems that time is one of many, many axes by which you may want to sort content. Are there better primitives we can wield while 
+communicating / creating artifacts that support rapid, realtime communication as well as iterative, long-term design? Can we create the tools 
+by which we allow larger and larger groups of people to effectively communicate and share information?
+
+Can relational algebra play a role in this?
+
+*** Bootstrapping, Doug Engelbart
+Create tools that elevate human capabilities. Then with elevated abilities, create better tools.
+*** Humane computing, Dynamic Land, Bret Victor
+Visible, public, collaborative work.
+*** Visible Evidence, Visual Display of quantitative information, Edward Tufte
+*** Answer "why?" before focusing on "how?". Prototyping before Braid, Jonathon Blow
+This just helped me to prioritize certain things on the project before others.
+*** 80/50, (Raph Koster? Citation Needed)
+If you aren't done with 80% of your game by the time you've spent 50% of your development budget, you're behind schedule.
+*** It doesn't have to be amazing to be useful. Khan Academy started because a surpring number of people used the videos Salman Khan made for his nephews. 
+*** Record Facts, "Deconstructing the Database", Rich Hickey
+*** Understanding Comics, Scott McCloud
+*** Computer Supported Cooperative Work (CSCW)
+*** Consciousness, Daniel Dennett 
